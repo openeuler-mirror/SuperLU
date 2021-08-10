@@ -1,11 +1,11 @@
 Name:           SuperLU
 Version:        5.2.1
-Release:        6
+Release:        7
 Summary:        Library for the direct solution of large, sparse, nonsymmetric systems of linear equations
 License:        BSD and GPLv2+
 URL:            http://crd-legacy.lbl.gov/~xiaoye/SuperLU/
 Source0:        http://crd-legacy.lbl.gov/~xiaoye/SuperLU/superlu_%{version}.tar.gz
-BuildRequires:  openblas-devel openblas-srpm-macros atlas-devel cmake3 gcc-gfortran csh
+BuildRequires:  openblas-devel openblas-srpm-macros cmake3 gcc-gfortran csh
 # Fixed include path for building
 Patch0000:      superlu-cmake-includedir.patch
 # Remove MC64 functionality
@@ -73,3 +73,6 @@ cd -
 %changelog
 * Thu Mar 5 2020 Ling Yang <lingyang2@huawei.com> - 5.2.1-6
 - Package Init
+
+* Tue Aug 10 2021 Senlin Xia <xiasenlin1@huawei.com> - 5.2.1-7
+- remove useless buildrequire: atlas-devel
